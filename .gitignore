@@ -1,0 +1,5 @@
+# Never commit passwords or generated client scripts (they contain passwords)
+passwords*.txt
+connect-scans*.sh
+*.cred
+__pycache__/

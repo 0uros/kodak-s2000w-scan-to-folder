@@ -1,0 +1,20 @@
+{
+  "data_dir": "/srv/scans",
+  "ocr_language": "eng",
+  "blank_page_threshold_percent": 0.02,
+  "admin_user": "support",
+  "scanners": {
+    "frontdesk": {
+      "ip": "192.168.1.50",
+      "panel_text": "Scan to Front Desk",
+      "share": "FrontDesk",
+      "settings": {"DPI": 300, "ScanSide": "Duplex", "ColorMode": "Color", "SkipBlankPages": 1, "AutoStart": 1}
+    },
+    "accounting": {
+      "ip": "192.168.1.51",
+      "panel_text": "Scan to Accounting",
+      "share": "Accounting",
+      "settings": {"DPI": 200, "ScanSide": "Duplex", "ColorMode": "Gray", "SkipBlankPages": 1, "AutoStart": 1}
+    }
+  }
+}

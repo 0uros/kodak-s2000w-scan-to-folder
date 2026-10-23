@@ -1,0 +1,22 @@
+# Keeps the Kodak scanner "%i" (see config.json) dedicated to its shared folder.
+[Unit]
+Description=Kodak scanner %i -> shared folder
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=scans
+Group=scans
+UMask=0007
+ExecStart=/usr/bin/python3 @APP@/kodak-session.py %i
+Restart=always
+RestartSec=10
+# On stop the script closes the session so the scanner is released.
+TimeoutStopSec=20
+ProtectSystem=strict
+ReadWritePaths=@DATA@/inbox
+PrivateTmp=yes
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target
