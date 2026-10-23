@@ -1,5 +1,7 @@
 # Connecting a Windows 10 / 11 PC
 
+**English** · [Español](windows.es.md)
+
 1. **This PC → Map network drive**.
 2. Drive **S:**, folder `\\<server>\<Share>` (for example `\\scans.example.org\FrontDesk`).
 3. Tick **Reconnect at sign-in** and **Connect using different credentials**.

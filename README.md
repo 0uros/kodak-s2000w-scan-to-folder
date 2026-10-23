@@ -1,5 +1,7 @@
 # Kodak Alaris S2080w / S2060w scan to network folder — no PC, no Smart Touch
 
+**English** · [Español](README.es.md)
+
 **Make a Kodak Alaris S2000w-series network scanner (S2080w, S2060w) save every scan as a searchable PDF
 in a shared network folder (SMB / Samba), without a Windows PC running Kodak Smart Touch.**
 
@@ -60,8 +62,9 @@ Details in [docs/web-api-notes.md](docs/web-api-notes.md).
   (300 dpi color).
 - The server must reach the scanner on **TCP 443**. PCs must reach the server on **TCP 445**.
 
-Tested on 2× S2080w (firmware 210503 and 230802) with a Debian 13 LXC container on Proxmox VE, Linux Mint
-desktops and Windows. In use in production since October 2026.
+Tested on 2× S2080w (firmware 210503 and 230802) with a Debian 13 LXC container on Proxmox VE and Linux
+Mint desktops. In use in production since October 2026. The Windows steps are the standard SMB drive mapping;
+reports from Windows users are welcome.
 
 ## Install
 
@@ -156,7 +159,7 @@ firmware. On firmware 210503 and 230802 it answers **HTTP 200 but stores nothing
 This was built for a university office in Argentina and is shared in case it saves someone else the same
 hunt. Issues and pull requests are welcome, especially:
 
-- results with other models (S2060w, S2040, S3000 series) or firmware versions;
+- results with other models (S2060w, the S3000 series) or firmware versions;
 - other client platforms (macOS);
 - translations of the docs.
 

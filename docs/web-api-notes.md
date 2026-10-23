@@ -1,7 +1,9 @@
 # Kodak Alaris S2000w Web API: field notes
 
+**English** · [Español](web-api-notes.es.md)
+
 What we learned while making a Kodak Alaris **S2080w** scan to a network folder without a PC. These notes
-should also apply to the **S2060w** and S2040 (same S2000w series). Tested on firmware **210503** (2021) and
+should also apply to the **S2060w**, the other network model of the S2000w series. Tested on firmware **210503** (2021) and
 **230802** (Dec 2023, the latest when this was written).
 
 ## The official documentation
@@ -71,8 +73,8 @@ GET    /api/scanner/capabilities?V2         → every setting and its allowed va
 5. **HTTP 408** on session creation means the scanner is waking up from sleep: retry after a second.
 6. **`SkipBlankPages: 1` did not drop blank backs in color mode** on our S2080w units. This project removes
    blank pages itself: a blank sheet had 0.0002 % dark pixels, the lightest real page 2.1 %.
-7. Validation is strict on newer firmware: numbers must be numbers (`"AutoStart": 1`, not `"1"`), or you get
-   HTTP 406.
+7. According to the guide, newer firmware validates strictly: numbers must be numbers (`"AutoStart": 1`, not
+   `"1"`), or you get HTTP 406. We always sent numbers.
 
 ## Timings measured on a real S2080w
 
